@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact - HealthCare Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - HealthCare Project</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Contact Us</h1>
+  <h1>Contact Us</h1>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="doctors.html">Doctors</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="doctors.html">Doctors</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<div class="container">
-    <h2>Get in Touch</h2>
+<main class="container">
+  <h2>Get in Touch</h2>
 
-    <form>
-        <label>Name:</label><br>
-        <input type="text" style="width:100%; padding:8px;"><br><br>
+  <!-- Replace the action URL below with your backend endpoint or a Formspree URL -->
+  <form action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+    <div class="form-group">
+      <label for="contact-name">Name:</label>
+      <input id="contact-name" name="name" type="text" required placeholder="Your full name">
+    </div>
 
-        <label>Email:</label><br>
-        <input type="email" style="width:100%; padding:8px;"><br><br>
+    <div class="form-group">
+      <label for="contact-email">Email:</label>
+      <input id="contact-email" name="email" type="email" required placeholder="you@example.com">
+    </div>
 
-        <label>Message:</label><br>
-        <textarea style="width:100%; padding:8px;" rows="5"></textarea><br><br>
+    <div class="form-group">
+      <label for="contact-message">Message:</label>
+      <textarea id="contact-message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+    </div>
 
-        <button type="submit" style="padding:10px 20px;">Submit</button>
-    </form>
-</div>
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+</main>
 
 <footer>
-    <p>© 2025 HealthCare Project</p>
+  <p>© 2025 HealthCare Project</p>
 </footer>
 
 </body>
